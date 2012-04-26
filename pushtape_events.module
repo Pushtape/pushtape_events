@@ -1,0 +1,43 @@
+<?php
+/**
+ * @file
+ * Code for the Pushtape Events feature.
+ */
+
+include_once('pushtape_events.features.inc');
+
+/**
+ * Implementation hook_panelizer_default_types_alter()
+ */
+function pushtape_events_panelizer_defaults_alter(&$defaults) {
+  // Require the panels panelizer include from features since 
+  // features doesn't support hook_panelizer_defaults() correctly.
+  // See https://drupal.org/node/1427150 for more on that.
+  require_once('pushtape_events.panelizer.inc');
+  foreach(pushtape_events_panelizer_defaults() as $name => $default) {
+    $defaults[$name] = $default;
+  }
+}
+
+/**
+ * Implementation of hook_apps_app_info()
+ */
+function pushtape_events_apps_app_info() {
+  return array(
+    'demo content module' => 'pushtape_events_democontent',
+    'configure form' => 'pushtape_events_configure_form',
+  );
+}
+
+
+/** 
+ * Pushtape Events App Configuration Form
+ *
+ * This form will be blank until we have specific settings to customize beyond
+ * the demo content that the apps.module puts here for us. 
+ */
+function pushtape_events_configure_form($form, &$form_state) {
+  $form = array();
+
+   return $form;
+}
