@@ -13,9 +13,9 @@ function pushtape_events_default_page_manager_pages() {
   $page->api_version = 1;
   $page->name = 'pushtape_events';
   $page->task = 'page';
-  $page->admin_title = 'Events';
+  $page->admin_title = 'shows';
   $page->admin_description = '';
-  $page->path = 'events';
+  $page->path = 'shows';
   $page->access = array(
     'plugins' => array(
       0 => array(
@@ -33,7 +33,7 @@ function pushtape_events_default_page_manager_pages() {
   );
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'Events',
+    'title' => 'events',
     'name' => 'main-menu',
     'weight' => '1',
     'parent' => array(
@@ -57,16 +57,18 @@ function pushtape_events_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Events',
+    'title' => 'Shows',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
     'css_id' => 'events-panel',
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
   );
   $display = new panels_display();
-  $display->layout = 'burr';
+  $display->layout = 'burr_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -81,23 +83,36 @@ function pushtape_events_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Events';
+  $display->title = 'Shows';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
-    $pane->subtype = 'pushtape_events-all_events';
+    $pane->subtype = 'pushtape_events-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '7',
-      'view_mode' => 'teaser',
+      'items_per_page' => '10',
+      'fields_override' => array(
+        'field_event_date' => 1,
+        'field_event_city' => 1,
+        'field_event_venue' => 1,
+        'field_venue_address' => 0,
+        'field_event_state' => 1,
+        'field_event_zip_post_code' => 0,
+        'title' => 1,
+        'field_event_date_1' => 1,
+      ),
+      'view_mode' => NULL,
       'widget_title' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'basic',
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
@@ -108,37 +123,20 @@ function pushtape_events_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
-    $pane->subtype = 'pushtape_events-monthly_mini_calendar';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['sidebar'][0] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'sidebar';
-    $pane->type = 'menu_tree';
-    $pane->subtype = 'main-menu';
+    $pane->subtype = 'pushtape_events-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'menu_name' => 'main-menu',
-      'parent_mlid' => 'main-menu:592',
-      'title_link' => 0,
-      'admin_title' => 'Event Types',
-      'level' => '2',
-      'follow' => 0,
-      'depth' => 0,
-      'expanded' => 0,
-      'sort' => 0,
-      'override_title' => 1,
-      'override_title_text' => 'Event Types',
+      'items_per_page' => '10',
+      'fields_override' => array(
+        'title' => 1,
+        'field_event_date' => 1,
+        'field_event_venue' => 1,
+        'field_event_city' => 1,
+        'field_event_state' => 1,
+      ),
+      'view_mode' => NULL,
+      'widget_title' => 'Past shows',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -147,10 +145,10 @@ function pushtape_events_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['sidebar'][1] = 'new-3';
+    $display->content['new-2'] = $pane;
+    $display->panels['sidebar'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

@@ -13,34 +13,35 @@ function pushtape_events_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_event_details|node|pushtape_event|form';
-  $field_group->group_name = 'group_event_details';
+  $field_group->identifier = 'group_venue_location|node|pushtape_event|form';
+  $field_group->group_name = 'group_venue_location';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'pushtape_event';
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Event Details',
+    'label' => 'Location',
     'weight' => '3',
     'children' => array(
-      0 => 'field_event_location',
-      1 => 'field_event_moreinfo',
-      2 => 'field_event_type',
-      3 => 'field_tags',
-      4 => 'field_event_address',
+      0 => 'field_event_address',
+      1 => 'field_event_location',
+      2 => 'field_event_city',
+      3 => 'field_event_venue',
+      4 => 'field_event_state',
+      5 => 'field_event_zip_post_code',
+      6 => 'field_venue_address',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Event Details',
+      'formatter' => 'collapsible',
       'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => '',
         'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'open',
     ),
   );
-  $export['group_event_details|node|pushtape_event|form'] = $field_group;
+  $export['group_venue_location|node|pushtape_event|form'] = $field_group;
 
   return $export;
 }

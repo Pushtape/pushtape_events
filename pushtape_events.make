@@ -1,10 +1,16 @@
-api = 2
-core=7.x
+api = "2"
+core="7.x"
 
-projects[] = ctools
-projects[] = date
-projects[] = features
-projects[] = field_group
-projects[] = link
-projects[] = strongarm
-projects[] = views
+dependencies[] = "ctools"
+dependencies[] = "date"
+dependencies[] = "features"
+dependencies[] = "field_group"
+dependencies[] = "image"
+dependencies[] = "link"
+dependencies[] = "pushtape_core"
+dependencies[] = "options"
+dependencies[] = "page_manager"
+dependencies[] = "panelizer"
+dependencies[] = "strongarm"
+dependencies[] = "taxonomy"
+dependencies[] = "views"
