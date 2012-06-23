@@ -6,18 +6,6 @@
 
 include_once('pushtape_events.features.inc');
 
-/**
- * Implementation hook_panelizer_default_types_alter()
- */
-function pushtape_events_panelizer_defaults_alter(&$defaults) {
-  // Require the panels panelizer include from features since 
-  // features doesn't support hook_panelizer_defaults() correctly.
-  // See https://drupal.org/node/1427150 for more on that.
-  require_once('pushtape_events.panelizer.inc');
-  foreach(pushtape_events_panelizer_defaults() as $name => $default) {
-    $defaults[$name] = $default;
-  }
-}
 
 /**
  * Implementation of hook_apps_app_info()
