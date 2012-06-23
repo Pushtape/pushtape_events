@@ -43,7 +43,6 @@ features[page_manager_pages][] = pushtape_events
 features[panelizer_defaults][] = node:pushtape_event:default
 features[panelizer_defaults][] = taxonomy_term:pushtape_event_type:default
 features[taxonomy][] = pushtape_event_type
-features[taxonomy][] = pushtape_tags
 features[variable][] = field_bundle_settings_node__pushtape_event
 features[variable][] = menu_options_pushtape_event
 features[variable][] = menu_parent_pushtape_event
