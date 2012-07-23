@@ -1,7 +1,14 @@
 api = 2
 core=7.x
 
+projects[link][version] = 1.0
+projects[link][subdir] = contrib
+
+projects[field_group][version] = 1.1
+projects[field_group][subdir] = contrib
+
 projects[date][version] = 2.5
+projects[date][subdir] = contrib
 
 projects[defaultcontent][version] = 1.x-dev
 projects[defaultcontent][subdir] = contrib

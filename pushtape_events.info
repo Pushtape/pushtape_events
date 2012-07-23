@@ -13,7 +13,6 @@ dependencies[] = image
 dependencies[] = link
 dependencies[] = options
 dependencies[] = page_manager
-dependencies[] = pushtape_core
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views
