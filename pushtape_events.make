@@ -5,6 +5,7 @@ projects[date][version] = 2.5
 
 projects[defaultcontent][version] = 1.x-dev
 projects[defaultcontent][subdir] = contrib
+
 projects[uuid][version] = 1.x-dev
 projects[uuid][subdir] = contrib
 
