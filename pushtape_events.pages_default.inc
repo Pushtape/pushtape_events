@@ -33,7 +33,7 @@ function pushtape_events_default_page_manager_pages() {
   );
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'events',
+    'title' => 'Events',
     'name' => 'main-menu',
     'weight' => '1',
     'parent' => array(
