@@ -20,6 +20,7 @@ function pushtape_events_context_default_contexts() {
     'path' => array(
       'values' => array(
         '/events' => '/events',
+        'events' => 'events',
       ),
     ),
   );
