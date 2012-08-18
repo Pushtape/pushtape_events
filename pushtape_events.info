@@ -49,4 +49,4 @@ features[variable][] = node_submitted_pushtape_event
 features[variable][] = pathauto_node_pushtape_event_pattern
 features[variable][] = pathauto_taxonomy_term_pushtape_event_type_pattern
 features[views_view][] = pushtape_events
-project status url = http://apps.pushtape.com
+project status url = http://apps.pushtape.com/fserver

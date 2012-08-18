@@ -30,8 +30,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'clearfix';
+  $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = 1;
   $handler->display->display_options['row_options']['default_field_elements'] = 1;
@@ -42,7 +41,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['empty']['area']['label'] = 'Empty Text';
   $handler->display->display_options['empty']['area']['empty'] = FALSE;
   $handler->display->display_options['empty']['area']['content'] = 'There are no events to be shown. ';
-  $handler->display->display_options['empty']['area']['format'] = 'panopoly_wysiwyg_text';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['empty']['area']['tokenize'] = 0;
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
@@ -212,15 +211,6 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
-  /* Contextual filter: Event Date */
-  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
-  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
-  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
-  $handler->display->display_options['arguments']['date_argument']['ui_name'] = 'Event Date';
-  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['date_argument']['default_argument_skip_url'] = 0;
-  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -1151,9 +1141,42 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['path'] = 'events';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Events';
-  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['weight'] = '10';
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
+  $translatables['pushtape_events'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Empty Text'),
+    t('There are no events to be shown. '),
+    t('author'),
+    t('Venue'),
+    t('Address'),
+    t('City'),
+    t('State'),
+    t('ZIP/Post Code'),
+    t('All Events'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('All'),
+    t('Events'),
+    t('Upcoming Events (table)'),
+    t('Upcoming Events'),
+    t('Date'),
+    t('Details'),
+    t('Event Date (field_event_date)'),
+    t('Sidebar of Previous Events'),
+    t('Past shows'),
+    t('Sidebar of Upcoming Events'),
+    t('Upcoming shows'),
+    t('Events Page'),
+  );
   $export['pushtape_events'] = $view;
 
   return $export;
