@@ -1,8 +1,6 @@
 api = 2
 core=7.x
 
-includes[debut_event] = "http://drupalcode.org/project/debut_event.git/blob_plain/refs/heads/7.x-1.x:/debut_event.make.inc"
-
 projects[link][subdir] = contrib
 projects[field_group][subdir] = contrib
 projects[date][subdir] = contrib
