@@ -8,6 +8,9 @@ projects[defaultcontent][subdir] = contrib
 projects[uuid][subdir] = contrib
 projects[entityreference][subdir] = contrib
 
+projects[calendar][type] = module
+projects[calendar][subdir] = contrib
+
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
 
@@ -22,3 +25,4 @@ projects[strongarm][subdir] = contrib
 
 projects[views][type] = module
 projects[views][subdir] = contrib
+
