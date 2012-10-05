@@ -13,3 +13,4 @@ features[content][] = pushtape-events-defaultcontent-5
 features[content][] = pushtape-events-defaultcontent-6
 features[features_api][] = api:1
 project status url = apps.rosenstrauch.com/fserver
+features[variable][] = node_content_enabled
