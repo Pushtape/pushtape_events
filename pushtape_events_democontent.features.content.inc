@@ -51,7 +51,7 @@ function pushtape_events_democontent_content_defaults() {
     'field_event_date' => array(
       'und' => array(
         0 => array(
-          'value' => '2012-07-19 02:30:00',
+          'value' => '2013-07-19 02:30:00',
           'timezone' => 'America/Los_Angeles',
           'timezone_db' => 'UTC',
           'date_type' => 'datetime',
@@ -153,7 +153,7 @@ function pushtape_events_democontent_content_defaults() {
     'field_event_date' => array(
       'und' => array(
         0 => array(
-          'value' => '2012-07-11 19:15:00',
+          'value' => '2013-07-11 19:15:00',
           'timezone' => 'America/Los_Angeles',
           'timezone_db' => 'UTC',
           'date_type' => 'datetime',
@@ -263,7 +263,7 @@ function pushtape_events_democontent_content_defaults() {
     'field_event_date' => array(
       'und' => array(
         0 => array(
-          'value' => '2012-06-18 05:15:00',
+          'value' => '2013-06-18 05:15:00',
           'timezone' => 'America/Los_Angeles',
           'timezone_db' => 'UTC',
           'date_type' => 'datetime',
@@ -364,7 +364,7 @@ function pushtape_events_democontent_content_defaults() {
     'field_event_date' => array(
       'und' => array(
         0 => array(
-          'value' => '2012-06-01 16:45:00',
+          'value' => '2013-06-01 16:45:00',
           'timezone' => 'America/Los_Angeles',
           'timezone_db' => 'UTC',
           'date_type' => 'datetime',
@@ -455,7 +455,7 @@ function pushtape_events_democontent_content_defaults() {
     'field_event_date' => array(
       'und' => array(
         0 => array(
-          'value' => '2012-10-23 20:00:00',
+          'value' => '2013-10-23 20:00:00',
           'timezone' => 'America/Los_Angeles',
           'timezone_db' => 'UTC',
           'date_type' => 'datetime',
