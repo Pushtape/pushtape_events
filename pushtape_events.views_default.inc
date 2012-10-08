@@ -1287,6 +1287,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['title'] = 'Upcoming shows';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['link_url'] = 'shows';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
