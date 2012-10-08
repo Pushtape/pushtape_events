@@ -67,13 +67,6 @@ function pushtape_events_democontent_content_defaults() {
         ),
       ),
     ),
-    'field_event_type' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4',
-        ),
-      ),
-    ),
     'field_event_city' => array(
       'und' => array(
         0 => array(
@@ -166,13 +159,6 @@ function pushtape_events_democontent_content_defaults() {
           'url' => 'http://www.amoeba.com/live-shows',
           'title' => 'Events Calendar',
           'attributes' => array(),
-        ),
-      ),
-    ),
-    'field_event_type' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '3',
         ),
       ),
     ),
@@ -279,13 +265,6 @@ function pushtape_events_democontent_content_defaults() {
         ),
       ),
     ),
-    'field_event_type' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4',
-        ),
-      ),
-    ),
     'field_event_city' => array(
       'und' => array(
         0 => array(
@@ -380,13 +359,6 @@ function pushtape_events_democontent_content_defaults() {
         ),
       ),
     ),
-    'field_event_type' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '5',
-        ),
-      ),
-    ),
     'field_event_city' => array(
       'und' => array(
         0 => array(
@@ -468,13 +440,6 @@ function pushtape_events_democontent_content_defaults() {
           'url' => 'http://themintla.com/index.cfm',
           'title' => 'The Mint',
           'attributes' => array(),
-        ),
-      ),
-    ),
-    'field_event_type' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4',
         ),
       ),
     ),
@@ -569,13 +534,6 @@ function pushtape_events_democontent_content_defaults() {
           'timezone' => 'America/Los_Angeles',
           'timezone_db' => 'UTC',
           'date_type' => 'datetime',
-        ),
-      ),
-    ),
-    'field_event_type' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4',
         ),
       ),
     ),
