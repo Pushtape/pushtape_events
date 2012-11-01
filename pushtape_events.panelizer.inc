@@ -91,12 +91,9 @@ function pushtape_events_panelizer_defaults() {
     $pane->pid = 'new-3';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_tags';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'inline',
-      'formatter' => 'taxonomy_term_reference_link',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
