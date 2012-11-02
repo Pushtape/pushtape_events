@@ -31,7 +31,12 @@ function pushtape_events_panelizer_defaults() {
   $display = new panels_display();
   $display->layout = 'flexible';
   $display->layout_settings = array();
-  $display->panel_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
   $display->cache = array();
   $display->title = '%node:title';
   $display->content = array();
@@ -53,7 +58,9 @@ function pushtape_events_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
@@ -80,7 +87,9 @@ function pushtape_events_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
@@ -89,27 +98,6 @@ function pushtape_events_panelizer_defaults() {
     $display->panels['center'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'center';
-    $pane->type = 'entity_field';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'panelizer',
-    );
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['center'][2] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_venue';
@@ -125,15 +113,17 @@ function pushtape_events_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['center'][3] = 'new-4';
+    $display->content['new-3'] = $pane;
+    $display->panels['center'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-4';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_venue_address';
@@ -149,15 +139,17 @@ function pushtape_events_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['center'][4] = 'new-5';
+    $display->content['new-4'] = $pane;
+    $display->panels['center'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-5';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_city';
@@ -173,15 +165,17 @@ function pushtape_events_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['center'][5] = 'new-6';
+    $display->content['new-5'] = $pane;
+    $display->panels['center'][4] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-6';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_state';
@@ -197,15 +191,17 @@ function pushtape_events_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 5;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['center'][6] = 'new-7';
+    $display->content['new-6'] = $pane;
+    $display->panels['center'][5] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-7';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_zip_post_code';
@@ -221,15 +217,17 @@ function pushtape_events_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 7;
+    $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['center'][7] = 'new-8';
+    $display->content['new-7'] = $pane;
+    $display->panels['center'][6] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-8';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -245,39 +243,17 @@ function pushtape_events_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 8;
-    $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['center'][8] = 'new-9';
-    $pane = new stdClass();
-    $pane->pid = 'new-10';
-    $pane->panel = 'center';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:media_gallery_directory';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'panelizer',
+    $pane->style = array(
+      'settings' => NULL,
     );
-    $pane->cache = array();
-    $pane->style = array();
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 9;
+    $pane->position = 7;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['center'][9] = 'new-10';
+    $display->content['new-8'] = $pane;
+    $display->panels['center'][7] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-9';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_date';
@@ -293,15 +269,17 @@ function pushtape_events_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 10;
+    $pane->position = 8;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['center'][10] = 'new-11';
+    $display->content['new-9'] = $pane;
+    $display->panels['center'][8] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-10';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_address';
@@ -317,15 +295,17 @@ function pushtape_events_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 11;
+    $pane->position = 9;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['center'][11] = 'new-12';
+    $display->content['new-10'] = $pane;
+    $display->panels['center'][9] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-11';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_moreinfo';
@@ -341,38 +321,15 @@ function pushtape_events_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 12;
+    $pane->position = 10;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['center'][12] = 'new-13';
-    $pane = new stdClass();
-    $pane->pid = 'new-14';
-    $pane->panel = 'center';
-    $pane->type = 'node_links';
-    $pane->subtype = 'node_links';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => FALSE,
-      'override_title_text' => '',
-      'build_mode' => 'page_manager',
-      'identifier' => '',
-      'link' => TRUE,
-      'context' => 'panelizer',
-    );
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array(
-      'css_class' => 'link-wrapper',
-    );
-    $pane->extras = array();
-    $pane->position = 13;
-    $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['center'][13] = 'new-14';
+    $display->content['new-11'] = $pane;
+    $display->panels['center'][10] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $panelizer->display = $display;

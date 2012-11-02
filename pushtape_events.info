@@ -37,7 +37,6 @@ features[field][] = node-pushtape_event-field_event_venue
 features[field][] = node-pushtape_event-field_event_zip_post_code
 features[field][] = node-pushtape_event-field_featured_image
 features[field][] = node-pushtape_event-field_venue_address
-features[field][] = node-pushtape_event-media_gallery_directory
 features[field_group][] = group_venue_location|node|pushtape_event|form
 features[node][] = pushtape_event
 features[page_manager_pages][] = pushtape_events
