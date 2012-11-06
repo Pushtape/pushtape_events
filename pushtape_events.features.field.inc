@@ -10,7 +10,7 @@
 function pushtape_events_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-pushtape_event-body'
+  // Exported field: 'node-pushtape_event-body'.
   $fields['node-pushtape_event-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,6 +33,7 @@ function pushtape_events_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -93,12 +94,79 @@ function pushtape_events_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '7',
+        'weight' => '4',
       ),
     ),
   );
 
-  // Exported field: 'node-pushtape_event-field_event_address'
+  // Exported field: 'node-pushtape_event-field_addthis'.
+  $fields['node-pushtape_event-field_addthis'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_addthis',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'addthis',
+      'settings' => array(
+        'max_length' => 255,
+      ),
+      'translatable' => '0',
+      'type' => 'addthis',
+    ),
+    'field_instance' => array(
+      'bundle' => 'pushtape_event',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'addthis',
+          'settings' => array(),
+          'type' => 'addthis_disabled',
+          'weight' => 12,
+        ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'mediaplaylist' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_addthis',
+      'label' => 'AddThis',
+      'required' => FALSE,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'addthis',
+        'settings' => array(),
+        'type' => 'addthis_button_widget',
+        'weight' => '6',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-pushtape_event-field_event_address'.
   $fields['node-pushtape_event-field_event_address'] = array(
     'field_config' => array(
       'active' => '1',
@@ -119,6 +187,7 @@ function pushtape_events_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -177,7 +246,7 @@ function pushtape_events_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-pushtape_event-field_event_city'
+  // Exported field: 'node-pushtape_event-field_event_city'.
   $fields['node-pushtape_event-field_event_city'] = array(
     'field_config' => array(
       'active' => '1',
@@ -198,6 +267,7 @@ function pushtape_events_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -257,7 +327,7 @@ function pushtape_events_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-pushtape_event-field_event_date'
+  // Exported field: 'node-pushtape_event-field_event_date'.
   $fields['node-pushtape_event-field_event_date'] = array(
     'field_config' => array(
       'active' => '1',
@@ -267,6 +337,7 @@ function pushtape_events_field_default_fields() {
       'field_name' => 'field_event_date',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'date',
       'settings' => array(
         'cache_count' => '4',
@@ -357,107 +428,7 @@ function pushtape_events_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-pushtape_event-field_event_moreinfo'
-  $fields['node-pushtape_event-field_event_moreinfo'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_event_moreinfo',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'pushtape_event',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '12',
-        ),
-        'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'grid' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_label',
-          'weight' => '3',
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_event_moreinfo',
-      'label' => 'More Information',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => 'action-link',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => 'default',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => '128',
-        'title_value' => '',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '11',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-pushtape_event-field_event_state'
+  // Exported field: 'node-pushtape_event-field_event_state'.
   $fields['node-pushtape_event-field_event_state'] = array(
     'field_config' => array(
       'active' => '1',
@@ -478,6 +449,7 @@ function pushtape_events_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -537,95 +509,7 @@ function pushtape_events_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-pushtape_event-field_event_type'
-  $fields['node-pushtape_event-field_event_type'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_event_type',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'pushtape_event_type',
-            'parent' => '0',
-          ),
-        ),
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'pushtape_event',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '0',
-        ),
-        'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'grid' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '6',
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_event_type',
-      'label' => 'Event Type',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
-        'weight' => '9',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-pushtape_event-field_event_venue'
+  // Exported field: 'node-pushtape_event-field_event_venue'.
   $fields['node-pushtape_event-field_event_venue'] = array(
     'field_config' => array(
       'active' => '1',
@@ -646,6 +530,7 @@ function pushtape_events_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -705,7 +590,7 @@ function pushtape_events_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-pushtape_event-field_event_zip_post_code'
+  // Exported field: 'node-pushtape_event-field_event_zip_post_code'.
   $fields['node-pushtape_event-field_event_zip_post_code'] = array(
     'field_config' => array(
       'active' => '1',
@@ -726,6 +611,7 @@ function pushtape_events_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -785,115 +671,7 @@ function pushtape_events_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-pushtape_event-field_featured_image'
-  $fields['node-pushtape_event-field_featured_image'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_featured_image',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'pushtape_event',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'panopoly_image_half',
-          ),
-          'type' => 'image',
-          'weight' => '1',
-        ),
-        'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'grid' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => 'content',
-            'image_style' => 'panopoly_image_half',
-          ),
-          'type' => 'image',
-          'weight' => '0',
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_featured_image',
-      'label' => 'Image',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 1,
-        'default_image' => 0,
-        'file_directory' => 'events',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '',
-        'max_resolution' => '',
-        'min_resolution' => '',
-        'title_field' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'media',
-        'settings' => array(
-          'allowed_schemes' => array(
-            0 => 'public',
-            1 => 'private',
-          ),
-          'allowed_types' => array(
-            0 => 'image',
-          ),
-          'browser_plugins' => array(),
-          'preview_image_style' => 'panopoly_image_full',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'media_generic',
-        'weight' => '1',
-      ),
-    ),
-  );
-
+  // Exported field: 'node-pushtape_event-field_venue_address'.
   $fields['node-pushtape_event-field_venue_address'] = array(
     'field_config' => array(
       'active' => '1',
@@ -914,6 +692,7 @@ function pushtape_events_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -975,14 +754,12 @@ function pushtape_events_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('AddThis');
   t('Address');
   t('City');
   t('Description');
   t('Event Date');
-  t('Event Type');
-  t('Image');
   t('Map Address');
-  t('More Information');
   t('Please enter a real street address for this event. This address will be used to provide a map to the location. ');
   t('State');
   t('Venue');
