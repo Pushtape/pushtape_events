@@ -5,6 +5,7 @@ package = Pushtape
 php = 5.2.4
 version = 7.x-1.x-dev
 project = pushtape_events
+dependencies[] = addthis
 dependencies[] = addthis_displays
 dependencies[] = calendar
 dependencies[] = date
