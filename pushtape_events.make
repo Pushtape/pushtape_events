@@ -1,6 +1,7 @@
 api = 2
 core=7.x
 
+projects[addthis][subdir] = contrib
 projects[link][subdir] = contrib
 projects[field_group][subdir] = contrib
 projects[date][subdir] = contrib
