@@ -8,6 +8,7 @@ project = pushtape_events
 dependencies[] = addthis
 dependencies[] = addthis_displays
 dependencies[] = calendar
+dependencies[] = ctools
 dependencies[] = date
 dependencies[] = date_views
 dependencies[] = features
