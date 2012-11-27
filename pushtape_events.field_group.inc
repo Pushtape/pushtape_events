@@ -24,12 +24,11 @@ function pushtape_events_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_event_address',
-      1 => 'field_event_location',
-      2 => 'field_event_city',
+      1 => 'field_event_city',
+      2 => 'field_event_state',
       3 => 'field_event_venue',
-      4 => 'field_event_state',
-      5 => 'field_event_zip_post_code',
-      6 => 'field_venue_address',
+      4 => 'field_event_zip_post_code',
+      5 => 'field_venue_address',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
