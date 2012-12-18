@@ -43,6 +43,15 @@ function pushtape_events_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'email_plain' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_html' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_textalt' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -50,7 +59,7 @@ function pushtape_events_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '12',
+          'weight' => '7',
         ),
       ),
       'display' => array(),
@@ -86,7 +95,7 @@ function pushtape_events_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_pushtape_event';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['node_preview_pushtape_event'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -106,17 +115,6 @@ function pushtape_events_strongarm() {
     'choice' => 0,
   );
   $export['panelizer_defaults_node_pushtape_event'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_defaults_taxonomy_term_pushtape_event_type';
-  $strongarm->value = array(
-    'status' => 1,
-    'default' => 1,
-    'choice' => 0,
-  );
-  $export['panelizer_defaults_taxonomy_term_pushtape_event_type'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
