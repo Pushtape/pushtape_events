@@ -34,15 +34,6 @@ function pushtape_events_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
-      'email_plain' => array(
-        'custom_settings' => FALSE,
-      ),
-      'email_html' => array(
-        'custom_settings' => FALSE,
-      ),
-      'email_textalt' => array(
-        'custom_settings' => FALSE,
-      ),
       'token' => array(
         'custom_settings' => FALSE,
       ),
@@ -53,7 +44,7 @@ function pushtape_events_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '3',
         ),
       ),
       'display' => array(),
