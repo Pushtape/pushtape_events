@@ -21,14 +21,14 @@ function pushtape_events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Location',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
-      0 => 'field_event_venue',
-      1 => 'field_venue_address',
-      2 => 'field_event_city',
-      3 => 'field_event_state',
+      0 => 'field_event_address',
+      1 => 'field_event_city',
+      2 => 'field_event_state',
+      3 => 'field_event_venue',
       4 => 'field_event_zip_post_code',
-      5 => 'field_event_address',
+      5 => 'field_venue_address',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

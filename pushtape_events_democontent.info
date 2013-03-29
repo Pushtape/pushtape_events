@@ -19,3 +19,11 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[variable][] = node_content_enabled
 project status url = apps.rosenstrauch.com/fserver
+
+
+; Information added by drush on 2013-03-28
+version = "7.x-1.x-panels-dev"
+core = "7.x"
+project = "pushtape_events"
+datestamp = "1364518912"
+

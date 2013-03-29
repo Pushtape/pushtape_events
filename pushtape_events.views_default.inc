@@ -38,8 +38,9 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
-  $handler->display->display_options['empty']['area']['label'] = 'Empty Text';
-  $handler->display->display_options['empty']['area']['content'] = 'There are no events to be shown. ';
+  $handler->display->display_options['empty']['area']['label'] = 'No events yet.';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No events yet. Create an <a href="?q=node/add/event">event!</a>';
   $handler->display->display_options['empty']['area']['format'] = 'panopoly_wysiwyg_text';
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';

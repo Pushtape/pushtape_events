@@ -44,7 +44,7 @@ function pushtape_events_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '10',
         ),
       ),
       'display' => array(),

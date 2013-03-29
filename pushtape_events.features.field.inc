@@ -85,7 +85,7 @@ function pushtape_events_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '5',
+        'weight' => '3',
       ),
     ),
   );
@@ -746,7 +746,7 @@ function pushtape_events_field_default_fields() {
           'display_label' => 1,
         ),
         'type' => 'options_onoff',
-        'weight' => '7',
+        'weight' => '11',
       ),
     ),
   );
@@ -835,7 +835,7 @@ function pushtape_events_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '6',
+        'weight' => '4',
       ),
     ),
   );
