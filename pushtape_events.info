@@ -8,6 +8,7 @@ project = pushtape_events
 dependencies[] = calendar
 dependencies[] = date
 dependencies[] = date_popup
+dependencies[] = date_views
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = link
@@ -15,6 +16,7 @@ dependencies[] = list
 dependencies[] = media
 dependencies[] = panelizer
 dependencies[] = strongarm
+dependencies[] = views
 dependencies[] = views_content
 datestamp = 1364518912
 features[ctools][] = field_group:field_group:1
@@ -44,9 +46,8 @@ features[variable][] = menu_parent_event
 features[variable][] = node_options_event
 features[variable][] = node_preview_event
 features[variable][] = node_submitted_event
+features[variable][] = panelizer_defaults_node_event
 features[views_view][] = events
-features_exclude[dependencies][views] = views
-features_exclude[dependencies][date_views] = date_views
 
 
 ; Information added by drush on 2013-03-28
