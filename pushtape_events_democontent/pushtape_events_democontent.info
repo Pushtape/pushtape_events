@@ -3,27 +3,16 @@ description = The magic that allows for demo content for events.
 core = 7.x
 package = Pushtape Demo Content
 php = 5.2.4
-version = 7.x-1.0
+version = 7.x-1.0-alpha3
 project = pushtape_events_democontent
 dependencies[] = ctools
-dependencies[] = strongarm
 dependencies[] = defaultcontent
+dependencies[] = strongarm
 datestamp = 1353988887
 features[content][] = pushtape-events-defaultcontent-1
 features[content][] = pushtape-events-defaultcontent-2
 features[content][] = pushtape-events-defaultcontent-3
 features[content][] = pushtape-events-defaultcontent-4
-features[content][] = pushtape-events-defaultcontent-5
-features[content][] = pushtape-events-defaultcontent-6
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[variable][] = node_content_enabled
-project status url = apps.rosenstrauch.com/fserver
-
-
-; Information added by drush on 2013-03-28
-version = "7.x-1.x-panels-dev"
-core = "7.x"
-project = "pushtape_events"
-datestamp = "1364518912"
-

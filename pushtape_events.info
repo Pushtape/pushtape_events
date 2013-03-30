@@ -47,3 +47,11 @@ features[variable][] = node_submitted_event
 features[views_view][] = events
 features_exclude[dependencies][views] = views
 features_exclude[dependencies][date_views] = date_views
+
+
+; Information added by drush on 2013-03-28
+version = "7.x-1.x-panels-dev"
+core = "7.x"
+project = "pushtape_events"
+datestamp = "1364538864"
+
