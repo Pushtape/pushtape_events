@@ -507,11 +507,11 @@ function pushtape_events_panelizer_defaults() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => FALSE,
+      'override_title' => 0,
       'override_title_text' => '',
-      'build_mode' => 'page_manager',
+      'build_mode' => 'full',
       'identifier' => '',
-      'link' => TRUE,
+      'link' => 1,
       'context' => 'panelizer',
     );
     $pane->cache = array();
@@ -561,12 +561,76 @@ function pushtape_events_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => 'events',
+      'css_class' => '',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-13'] = $pane;
     $display->panels['sidebar'][0] = 'new-13';
+    $pane = new stdClass();
+    $pane->pid = 'new-14';
+    $pane->panel = 'sidebar';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'news-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'teaser',
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
+      'view_settings' => 'fields',
+      'header_type' => 'none',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => 'news',
+      'css_class' => '',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-14'] = $pane;
+    $display->panels['sidebar'][1] = 'new-14';
+    $pane = new stdClass();
+    $pane->pid = 'new-15';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'simplenews-1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => 'newsletter',
+      'css_class' => '',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-15'] = $pane;
+    $display->panels['sidebar'][2] = 'new-15';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-7';
   $panelizer->display = $display;
