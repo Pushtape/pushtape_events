@@ -38,10 +38,10 @@ function pushtape_events_views_api() {
  */
 function pushtape_events_node_info() {
   $items = array(
-    'pushtape_event' => array(
+    'event' => array(
       'name' => t('Event'),
       'base' => 'node_content',
-      'description' => t('An important event to post to your site. '),
+      'description' => t('Create an event with a date and time.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

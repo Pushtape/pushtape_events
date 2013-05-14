@@ -13,15 +13,15 @@ function pushtape_events_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_venue_location|node|pushtape_event|form';
+  $field_group->identifier = 'group_venue_location|node|event|form';
   $field_group->group_name = 'group_venue_location';
   $field_group->entity_type = 'node';
-  $field_group->bundle = 'pushtape_event';
+  $field_group->bundle = 'event';
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Location',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'field_event_address',
       1 => 'field_event_city',
@@ -40,7 +40,7 @@ function pushtape_events_field_group_info() {
       ),
     ),
   );
-  $export['group_venue_location|node|pushtape_event|form'] = $field_group;
+  $export['group_venue_location|node|event|form'] = $field_group;
 
   return $export;
 }
