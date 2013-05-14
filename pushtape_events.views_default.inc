@@ -11,7 +11,7 @@ function pushtape_events_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'pushtape_events';
+  $view->name = 'events';
   $view->description = 'Administrative view to show events.';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -38,8 +38,9 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
-  $handler->display->display_options['empty']['area']['label'] = 'Empty Text';
-  $handler->display->display_options['empty']['area']['content'] = 'There are no events to be shown. ';
+  $handler->display->display_options['empty']['area']['label'] = 'No events yet.';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No events yet. Create an <a href="?q=node/add/event">event!</a>';
   $handler->display->display_options['empty']['area']['format'] = 'panopoly_wysiwyg_text';
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
@@ -87,7 +88,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '200',
   );
-  /* Sort criterion: Content: Event Date (field_event_date) */
+  /* Sort criterion: Content: Date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -114,7 +115,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'pushtape_event' => 'pushtape_event',
+    'event' => 'event',
   );
 
   /* Display: Monthly Calendar */
@@ -271,15 +272,6 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
-  /* Contextual filter: Broken/missing handler */
-  $handler->display->display_options['arguments']['field_event_type_tid']['id'] = 'field_event_type_tid';
-  $handler->display->display_options['arguments']['field_event_type_tid']['table'] = 'field_data_field_event_type';
-  $handler->display->display_options['arguments']['field_event_type_tid']['field'] = 'field_event_type_tid';
-  $handler->display->display_options['arguments']['field_event_type_tid']['ui_name'] = 'Event Type';
-  $handler->display->display_options['arguments']['field_event_type_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_event_type_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_event_type_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_event_type_tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_title'] = 'Monthly Mini Calendar';
   $handler->display->display_options['pane_category']['name'] = 'Events';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -383,31 +375,6 @@ function pushtape_events_views_default_views() {
     'trim_length' => '200',
   );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Broken/missing handler */
-  $handler->display->display_options['arguments']['field_event_type_tid']['id'] = 'field_event_type_tid';
-  $handler->display->display_options['arguments']['field_event_type_tid']['table'] = 'field_data_field_event_type';
-  $handler->display->display_options['arguments']['field_event_type_tid']['field'] = 'field_event_type_tid';
-  $handler->display->display_options['arguments']['field_event_type_tid']['ui_name'] = 'Event Type';
-  $handler->display->display_options['arguments']['field_event_type_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_event_type_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_event_type_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_event_type_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'pushtape_event' => 'pushtape_event',
-  );
   $handler->display->display_options['pane_title'] = 'All Events';
   $handler->display->display_options['pane_category']['name'] = 'Events';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -486,7 +453,6 @@ function pushtape_events_views_default_views() {
   /* Display: Upcoming Events (table) */
   $handler = $view->new_display('panel_pane', 'Upcoming Events (table)', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Upcoming Events';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -572,7 +538,6 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['ui_name'] = 'Day';
-  $handler->display->display_options['fields']['field_event_date']['label'] = 'Date';
   $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
@@ -639,17 +604,13 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'pushtape_event' => 'pushtape_event',
+    'event' => 'event',
   );
-  /* Filter criterion: Content: Event Date (field_event_date) */
+  /* Filter criterion: Content: Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['operator_id'] = 'field_event_date_value_op';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['label'] = 'Event Date (field_event_date)';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['operator'] = 'field_event_date_value_op';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['identifier'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';
   $handler->display->display_options['pane_title'] = 'Upcoming Events (table)';
   $handler->display->display_options['pane_category']['name'] = 'Events';
@@ -731,7 +692,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_state']['label'] = '';
   $handler->display->display_options['fields']['field_event_state']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Event Date (field_event_date) */
+  /* Sort criterion: Content: Date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -751,17 +712,13 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'pushtape_event' => 'pushtape_event',
+    'event' => 'event',
   );
-  /* Filter criterion: Content: Event Date (field_event_date) */
+  /* Filter criterion: Content: Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['operator'] = '<=';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['operator_id'] = 'field_event_date_value_op';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['label'] = 'Event Date (field_event_date)';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['operator'] = 'field_event_date_value_op';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['identifier'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';
   $handler->display->display_options['pane_title'] = 'Sidebar of Previous Events';
   $handler->display->display_options['pane_category']['name'] = 'Events';
@@ -846,7 +803,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_state']['label'] = '';
   $handler->display->display_options['fields']['field_event_state']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Event Date (field_event_date) */
+  /* Sort criterion: Content: Date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -866,17 +823,13 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'pushtape_event' => 'pushtape_event',
+    'event' => 'event',
   );
-  /* Filter criterion: Content: Event Date (field_event_date) */
+  /* Filter criterion: Content: Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['operator_id'] = 'field_event_date_value_op';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['label'] = 'Event Date (field_event_date)';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['operator'] = 'field_event_date_value_op';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['identifier'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';
   $handler->display->display_options['pane_title'] = 'Sidebar of Upcoming Events';
   $handler->display->display_options['pane_category']['name'] = 'Events';
@@ -890,7 +843,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 0;
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
-  $export['pushtape_events'] = $view;
+  $export['events'] = $view;
 
   return $export;
 }
