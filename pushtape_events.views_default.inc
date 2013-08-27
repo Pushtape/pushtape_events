@@ -22,6 +22,7 @@ function pushtape_events_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'widgets';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -625,8 +626,8 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
 
-  /* Display: Sidebar of Previous Events */
-  $handler = $view->new_display('panel_pane', 'Sidebar of Previous Events', 'panel_pane_2');
+  /* Display: Previous Events */
+  $handler = $view->new_display('panel_pane', 'Previous Events', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Past shows';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -742,10 +743,12 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
 
-  /* Display: Sidebar of Upcoming Events */
-  $handler = $view->new_display('panel_pane', 'Sidebar of Upcoming Events', 'panel_pane_3');
+  /* Display: Upcoming Events */
+  $handler = $view->new_display('panel_pane', 'Upcoming Events', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Upcoming shows';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'widgets';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
