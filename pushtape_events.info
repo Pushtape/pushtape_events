@@ -2,7 +2,6 @@ name = Pushtape Events
 description = This features package configures an event content type and a view.
 core = 7.x
 package = Pushtape
-php = 5.2.4
 version = 7.x-1.0-alpha3
 project = pushtape_events
 dependencies[] = calendar
@@ -77,3 +76,11 @@ features_exclude[field][node-event-field_featured_image] = node-event-field_feat
 features_exclude[field][node-event-field_featured_status] = node-event-field_featured_status
 features_exclude[field][node-event-field_links] = node-event-field_links
 features_exclude[field][node-event-field_venue_address] = node-event-field_venue_address
+
+
+; Information added by drush on 2013-09-16
+version = "7.x-1.0-alpha3"
+core = "7.x"
+project = "pushtape_events"
+datestamp = "1379362208"
+
