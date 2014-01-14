@@ -24,3 +24,11 @@ core = "7.x"
 project = "pushtape_events"
 datestamp = "1376349392"
 
+
+
+; Information added by drush on 2013-11-12
+version = "7.x-1.x-panels-dev"
+core = "7.x"
+project = "pushtape_events"
+datestamp = "1384243646"
+

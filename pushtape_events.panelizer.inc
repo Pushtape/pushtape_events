@@ -30,7 +30,7 @@ function pushtape_events_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'selby_flipped';
+  $display->layout = 'santana_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -607,30 +607,6 @@ function pushtape_events_panelizer_defaults() {
     $pane->locks = array();
     $display->content['new-14'] = $pane;
     $display->panels['sidebar'][1] = 'new-14';
-    $pane = new stdClass();
-    $pane->pid = 'new-15';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'simplenews-1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => 'newsletter',
-      'css_class' => '',
-    );
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['sidebar'][2] = 'new-15';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-7';
   $panelizer->display = $display;
