@@ -20,7 +20,7 @@ function pushtape_events_panelizer_defaults() {
   $panelizer->no_blocks = FALSE;
   $panelizer->css_id = 'events';
   $panelizer->css = '';
-  $panelizer->pipeline = 'standard';
+  $panelizer->pipeline = 'ipe';
   $panelizer->contexts = array();
   $panelizer->relationships = array();
   $panelizer->access = array();
@@ -337,6 +337,33 @@ function pushtape_events_panelizer_defaults() {
     $display->panels['contentfooter'][0] = 'new-7';
     $pane = new stdClass();
     $pane->pid = 'new-8';
+    $pane->panel = 'contentfooter';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 1,
+      'context' => 'panelizer',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_class' => 'link-wrapper',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['contentfooter'][1] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
     $pane->panel = 'contentheader';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_featured_image';
@@ -377,10 +404,10 @@ function pushtape_events_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['contentheader'][0] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['contentheader'][0] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'contentheader';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_date';
@@ -424,10 +451,10 @@ function pushtape_events_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['contentheader'][1] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['contentheader'][1] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
     $pane->panel = 'contentheader';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_date';
@@ -471,10 +498,10 @@ function pushtape_events_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['contentheader'][2] = 'new-10';
+    $display->content['new-11'] = $pane;
+    $display->panels['contentheader'][2] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-12';
     $pane->panel = 'contentheader';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_links';
@@ -497,35 +524,8 @@ function pushtape_events_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['contentheader'][3] = 'new-11';
-    $pane = new stdClass();
-    $pane->pid = 'new-12';
-    $pane->panel = 'contentheader';
-    $pane->type = 'node_links';
-    $pane->subtype = 'node_links';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'build_mode' => 'full',
-      'identifier' => '',
-      'link' => 1,
-      'context' => 'panelizer',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_class' => 'link-wrapper',
-    );
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
     $display->content['new-12'] = $pane;
-    $display->panels['contentheader'][4] = 'new-12';
+    $display->panels['contentheader'][3] = 'new-12';
     $pane = new stdClass();
     $pane->pid = 'new-13';
     $pane->panel = 'sidebar';
@@ -608,7 +608,7 @@ function pushtape_events_panelizer_defaults() {
     $display->content['new-14'] = $pane;
     $display->panels['sidebar'][1] = 'new-14';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-7';
+  $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:event:default'] = $panelizer;
 

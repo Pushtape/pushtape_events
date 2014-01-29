@@ -74,7 +74,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_zip_post_code']['id'] = 'field_event_zip_post_code';
   $handler->display->display_options['fields']['field_event_zip_post_code']['table'] = 'field_data_field_event_zip_post_code';
   $handler->display->display_options['fields']['field_event_zip_post_code']['field'] = 'field_event_zip_post_code';
-  /* Field: Content: Body */
+  /* Field: Content: Notes */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -474,29 +474,33 @@ function pushtape_events_views_default_views() {
     'field_event_zip_post_code' => 'field_event_city',
     'title' => 'title',
     'field_event_date_1' => 'title',
+    'field_links' => 'field_links',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
     'field_event_date' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => '',
+      'align' => 'views-align-left',
       'separator' => ', ',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'field_event_city' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => '',
+      'align' => 'views-align-left',
       'separator' => ', ',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'field_event_venue' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => '',
+      'align' => 'views-align-left',
       'separator' => '',
       'empty_column' => 0,
+      'responsive' => 'priority-medium',
     ),
     'field_venue_address' => array(
       'sortable' => 0,
@@ -504,6 +508,7 @@ function pushtape_events_views_default_views() {
       'align' => '',
       'separator' => ', ',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'field_event_state' => array(
       'sortable' => 0,
@@ -511,6 +516,7 @@ function pushtape_events_views_default_views() {
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'field_event_zip_post_code' => array(
       'sortable' => 0,
@@ -518,13 +524,15 @@ function pushtape_events_views_default_views() {
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => '',
+      'align' => 'views-align-left',
       'separator' => '<br>',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'field_event_date_1' => array(
       'sortable' => 0,
@@ -532,6 +540,13 @@ function pushtape_events_views_default_views() {
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+      'responsive' => '',
+    ),
+    'field_links' => array(
+      'align' => 'views-align-left',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => '',
     ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -594,6 +609,14 @@ function pushtape_events_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
+  /* Field: Content: Links */
+  $handler->display->display_options['fields']['field_links']['id'] = 'field_links';
+  $handler->display->display_options['fields']['field_links']['table'] = 'field_data_field_links';
+  $handler->display->display_options['fields']['field_links']['field'] = 'field_links';
+  $handler->display->display_options['fields']['field_links']['label'] = '';
+  $handler->display->display_options['fields']['field_links']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_links']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_links']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
