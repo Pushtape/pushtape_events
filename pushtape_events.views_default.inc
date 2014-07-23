@@ -22,6 +22,7 @@ function pushtape_events_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'widgets';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -73,7 +74,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_zip_post_code']['id'] = 'field_event_zip_post_code';
   $handler->display->display_options['fields']['field_event_zip_post_code']['table'] = 'field_data_field_event_zip_post_code';
   $handler->display->display_options['fields']['field_event_zip_post_code']['field'] = 'field_event_zip_post_code';
-  /* Field: Content: Body */
+  /* Field: Content: Notes */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -98,6 +99,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['ui_name'] = 'Event Date';
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
   $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'hour';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
@@ -177,6 +179,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['ui_name'] = 'Event Date';
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
   $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
@@ -268,6 +271,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['ui_name'] = 'Event Date';
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
   $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
@@ -437,6 +441,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['title'] = '%1';
   $handler->display->display_options['arguments']['date_argument']['breadcrumb_enable'] = TRUE;
   $handler->display->display_options['arguments']['date_argument']['breadcrumb'] = '%1';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
   $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
@@ -469,29 +474,33 @@ function pushtape_events_views_default_views() {
     'field_event_zip_post_code' => 'field_event_city',
     'title' => 'title',
     'field_event_date_1' => 'title',
+    'field_links' => 'field_links',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
     'field_event_date' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => '',
+      'align' => 'views-align-left',
       'separator' => ', ',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'field_event_city' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => '',
+      'align' => 'views-align-left',
       'separator' => ', ',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'field_event_venue' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => '',
+      'align' => 'views-align-left',
       'separator' => '',
       'empty_column' => 0,
+      'responsive' => 'priority-medium',
     ),
     'field_venue_address' => array(
       'sortable' => 0,
@@ -499,6 +508,7 @@ function pushtape_events_views_default_views() {
       'align' => '',
       'separator' => ', ',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'field_event_state' => array(
       'sortable' => 0,
@@ -506,6 +516,7 @@ function pushtape_events_views_default_views() {
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'field_event_zip_post_code' => array(
       'sortable' => 0,
@@ -513,13 +524,15 @@ function pushtape_events_views_default_views() {
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => '',
+      'align' => 'views-align-left',
       'separator' => '<br>',
       'empty_column' => 0,
+      'responsive' => '',
     ),
     'field_event_date_1' => array(
       'sortable' => 0,
@@ -527,6 +540,13 @@ function pushtape_events_views_default_views() {
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+      'responsive' => '',
+    ),
+    'field_links' => array(
+      'align' => 'views-align-left',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => '',
     ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -589,6 +609,14 @@ function pushtape_events_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
+  /* Field: Content: Links */
+  $handler->display->display_options['fields']['field_links']['id'] = 'field_links';
+  $handler->display->display_options['fields']['field_links']['table'] = 'field_data_field_links';
+  $handler->display->display_options['fields']['field_links']['field'] = 'field_links';
+  $handler->display->display_options['fields']['field_links']['label'] = '';
+  $handler->display->display_options['fields']['field_links']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_links']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_links']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -621,12 +649,12 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['allow']['link_to_view'] = 0;
   $handler->display->display_options['allow']['more_link'] = 0;
   $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
 
-  /* Display: Sidebar of Previous Events */
-  $handler = $view->new_display('panel_pane', 'Sidebar of Previous Events', 'panel_pane_2');
+  /* Display: Previous Events */
+  $handler = $view->new_display('panel_pane', 'Previous Events', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Past shows';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -738,14 +766,16 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['allow']['link_to_view'] = 0;
   $handler->display->display_options['allow']['more_link'] = 0;
   $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
 
-  /* Display: Sidebar of Upcoming Events */
-  $handler = $view->new_display('panel_pane', 'Sidebar of Upcoming Events', 'panel_pane_3');
+  /* Display: Upcoming Events */
+  $handler = $view->new_display('panel_pane', 'Upcoming Events', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Upcoming shows';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'widgets';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
@@ -847,9 +877,9 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
   $handler->display->display_options['allow']['offset'] = 0;
   $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 'more_link';
   $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $export['events'] = $view;

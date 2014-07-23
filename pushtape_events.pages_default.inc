@@ -37,17 +37,17 @@ function pushtape_events_default_page_manager_pages() {
   $handler->weight = 0;
   $handler->conf = array(
     'title' => 'Landing page',
-    'no_blocks' => FALSE,
+    'no_blocks' => 0,
     'pipeline' => 'ipe',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
-    'css_id' => '',
+    'css_id' => 'events',
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'brenham_flipped';
+  $display->layout = 'bonham_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -59,10 +59,11 @@ function pushtape_events_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'Events';
+  $display->uuid = 'b17472e1-c860-4aec-a51c-31316709c674';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-da654ba0-772b-43bb-a2c2-d15326d17ec1';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-panel_pane_1';
@@ -104,10 +105,11 @@ function pushtape_events_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['contentmain'][0] = 'new-1';
+    $pane->uuid = 'da654ba0-772b-43bb-a2c2-d15326d17ec1';
+    $display->content['new-da654ba0-772b-43bb-a2c2-d15326d17ec1'] = $pane;
+    $display->panels['contentmain'][0] = 'new-da654ba0-772b-43bb-a2c2-d15326d17ec1';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-4fe863e3-a113-4926-ad54-89ad50167e98';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-panel_pane_2';
@@ -148,10 +150,11 @@ function pushtape_events_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['sidebar'][0] = 'new-2';
+    $pane->uuid = '4fe863e3-a113-4926-ad54-89ad50167e98';
+    $display->content['new-4fe863e3-a113-4926-ad54-89ad50167e98'] = $pane;
+    $display->panels['sidebar'][0] = 'new-4fe863e3-a113-4926-ad54-89ad50167e98';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-f83d6cf2-af88-4456-a6fa-ed418a36c4b3';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
     $pane->subtype = 'news-panel_pane_2';
@@ -185,8 +188,9 @@ function pushtape_events_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['sidebar'][1] = 'new-3';
+    $pane->uuid = 'f83d6cf2-af88-4456-a6fa-ed418a36c4b3';
+    $display->content['new-f83d6cf2-af88-4456-a6fa-ed418a36c4b3'] = $pane;
+    $display->panels['sidebar'][1] = 'new-f83d6cf2-af88-4456-a6fa-ed418a36c4b3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

@@ -35,7 +35,7 @@ function pushtape_events_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-venue-location field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
