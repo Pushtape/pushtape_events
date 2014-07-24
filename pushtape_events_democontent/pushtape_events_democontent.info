@@ -18,25 +18,9 @@ features[features_api][] = api:1
 features[variable][] = node_content_enabled
 
 
-; Information added by drush on 2013-08-12
+; Information added by drush on 2014-07-22
 version = "7.x-1.x-panels-dev"
 core = "7.x"
 project = "pushtape_events"
-datestamp = "1376349392"
-
-
-
-; Information added by drush on 2013-11-12
-version = "7.x-1.x-panels-dev"
-core = "7.x"
-project = "pushtape_events"
-datestamp = "1384243646"
-
-
-
-; Information added by drush on 2014-01-14
-version = "7.x-1.x-panels-dev"
-core = "7.x"
-project = "pushtape_events"
-datestamp = "1389690492"
+datestamp = "1406085707"
 
