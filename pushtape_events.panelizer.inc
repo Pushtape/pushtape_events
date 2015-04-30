@@ -572,7 +572,16 @@ function pushtape_events_panelizer_defaults() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'pane_style' => array(
+          'well' => 'well',
+          'pull-left' => 0,
+          'pull-right' => 0,
+          'clearfix' => 0,
+          'jumbotron' => 0,
+        ),
+      ),
+      'style' => 'bootstrapcustomize',
     );
     $pane->css = array(
       'css_id' => 'events',
@@ -610,7 +619,16 @@ function pushtape_events_panelizer_defaults() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'pane_style' => array(
+          'well' => 'well',
+          'pull-left' => 0,
+          'pull-right' => 0,
+          'clearfix' => 0,
+          'jumbotron' => 0,
+        ),
+      ),
+      'style' => 'bootstrapcustomize',
     );
     $pane->css = array(
       'css_id' => 'news',
