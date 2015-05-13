@@ -74,7 +74,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_zip_post_code']['id'] = 'field_event_zip_post_code';
   $handler->display->display_options['fields']['field_event_zip_post_code']['table'] = 'field_data_field_event_zip_post_code';
   $handler->display->display_options['fields']['field_event_zip_post_code']['field'] = 'field_event_zip_post_code';
-  /* Field: Content: Notes */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -465,6 +465,7 @@ function pushtape_events_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['style_options']['columns'] = array(
     'field_event_date' => 'field_event_date',
